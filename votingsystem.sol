@@ -28,7 +28,7 @@ contract Voting {
         if (msg.sender!=owner) {
             revert("only owner ends voting");
         }
-        if (msg.sender!=owner) {
+        if (votingEnded) {
             revert("Voting has already ended");
         }
         votingEnded = true;
